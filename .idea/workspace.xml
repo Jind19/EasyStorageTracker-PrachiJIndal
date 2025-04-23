@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3dc3add1-5f2c-47b0-acfe-1b50b923f8e8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/TrackerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/TrackerDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/StorageUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/StorageUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Perishable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Perishable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

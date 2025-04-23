@@ -3,29 +3,19 @@ package model;
 import java.time.LocalDate;
 
 public class Perishable {
-    private String nameOfPerishable;
-    private LocalDate expirationDate;
+    private boolean expired;
 
-    public Perishable(String nameOfPerishable, LocalDate expirationDate) {
-        this.nameOfPerishable = nameOfPerishable;
-        this.expirationDate = expirationDate;
+    public Perishable(boolean expired) {
+        this.expired = expired;
     }
 
     public boolean isExpired() {
-        return expirationDate.isBefore(LocalDate.now());
-    }
-
-    public LocalDate getExpirationDate() {
-        return expirationDate;
+        return expired;
     }
 
     @Override
     public String toString() {
-        return "Perishable{" +
-                "nameOfPerishable='" + nameOfPerishable + '\'' +
-                ", expirationDate=" + expirationDate +
-                '}';
+        return "Perishable: " +
+                "expired=" + expired ;
     }
-
-
 }

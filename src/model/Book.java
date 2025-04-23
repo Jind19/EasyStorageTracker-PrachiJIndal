@@ -2,15 +2,18 @@ package model;
 
 public class Book {
     private String bookTitle;
+    private String author;
 
-    public Book(String title) {
-        this.bookTitle = title;
+    public Book(String author, String bookTitle) {
+        this.author = author;
+        this.bookTitle = bookTitle;
     }
 
     @Override
     public String toString() {
-        return "Book{" +
-                "title='" + bookTitle + '\'' +
-                '}';
+        return "Book: " +
+                "bookTitle='" + bookTitle + '\'' +
+                ", author='" + author + '\'';
     }
+
 }

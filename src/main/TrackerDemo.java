@@ -1,39 +1,42 @@
 package main;
+//our packages
+import model.*;
+import storage.*;
+//java package
+import java.util.*;
 
-import model.Book;
-import model.Device;
-import model.Perishable;
-import model.Snack;
-import storage.StorageUnit;
-import storage.StorageUtils;
-
-import java.time.LocalDate;
 
 public class TrackerDemo {
 
     public static void main(String[] args) {
 
-        StorageUnit<Book> book1 = new StorageUnit<Book>();
-        StorageUnit<Device> device1 = new StorageUnit<Device>();
-        StorageUnit<Snack> snack1 = new StorageUnit<Snack>();
-        StorageUnit<Perishable> perishable1 = new StorageUnit<>();
+        StorageUnit<Book> bookStorage = new StorageUnit<>();
+        bookStorage.addItem(new Book("Alice", "Java Fundamentals"));
 
-        book1.addItem(new Book("Harry Potter"));
-        device1.addItem(new Device("Iphone16Pro"));
-        snack1.addItem(new Snack("Pizza"));
-        perishable1.addItem(new Perishable("Milk", LocalDate.of(2025, 7, 25)));
+        StorageUnit<Device> deviceStorage = new StorageUnit<>();
+        deviceStorage.addItem(new Device("Smartphone", "SN123456T"));
 
+        StorageUnit<Snack> snackStorage = new StorageUnit<>();
+        snackStorage.addItem(new Snack("Chips", "Cheese", false));
 
-        StorageUtils.printStorageUnitItems(book1);
-        StorageUtils.printStorageUnitItems(device1);
-        StorageUtils.printStorageUnitItems(snack1);
-        StorageUtils.printStorageUnitItems(perishable1);
+//        StorageUtils.displayItem(bookStorage.getItem());
+//        StorageUtils.displayItem(deviceStorage.getItem());
+//        StorageUtils.displayItem(snackStorage.getItem());
+//
+//        StorageUtils.checkPerishable(snackStorage.getItem());
 
+//        List<Object> inventory = new ArrayList<>();
+//        inventory.add(bookStorage.getItem());
+//        inventory.add(deviceStorage.getItem());
+//        inventory.add(snackStorage.getItem());
+//
+//        StorageUtils.printItems(inventory);
 
-
-
-
-
+        StorageManager<Book> bookManager = new StorageManager<>();
+        bookManager.addItem(new Book("Clean Code", "Robert C. Martin"));
+        bookManager.addItem(new Book("Effective Java", "Joshua Bloch"));
+        System.out.println("Books in Storage");
+        bookManager.printAll();
 
     }
 }

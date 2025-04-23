@@ -5,21 +5,17 @@ import java.util.List;
 
 public class StorageManager<T>{
 
-    private List<T> items;
-
-    public StorageManager() {
-        this.items = new ArrayList<>();
-    }
+    private List<T> items = new ArrayList<>();
 
     public void addItem(T item) {
         items.add(item);
     }
 
-    public List<T> getAllItems() {
+    public List<T> getItems() {
         return items;
     }
 
-    public void displayAllItems() {
+    public void printAll() {
         for (T item : items) {
             System.out.println(item);
         }
